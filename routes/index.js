@@ -18,10 +18,10 @@ exports.create = function(req, res) {
 
 exports.save = function(req, res) {
 	cb(function(err, bucket) {
-		if (err) { throw(error); }
+		if (err) { throw(err); }
 
 		bucket.get('tidepool::counter', function(err, count) {
-			if (err) { throw(error); }
+			if (err) { throw(err); }
 
 			var data = req.body.tidepool;
 			count++;
