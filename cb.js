@@ -2,7 +2,7 @@ var couchbase = require('couchbase');
 
 var config = {
 	user: 'admin',
-	password: 'apple123',
+	password: 'password',
 	hosts: ['192.168.2.254:8091'],
 	bucket: 'default'
 };
