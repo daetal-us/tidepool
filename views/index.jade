@@ -1,0 +1,10 @@
+extends layout
+
+block content
+
+	a(href='/create',class='new') log new tidepool
+
+	each tidepool in tidepools
+		li
+			a(href='/#{tidepool.value.number}') #{tidepool.value.number}. #{tidepool.value.date} #{tidepool.value.time}
+

@@ -1,0 +1,86 @@
+html {
+  padding: 0;
+  margin: 0;
+  font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: -webkit-linear-gradient(bottom, #010642 0%, #33e7ff 98%);
+}
+html body {
+  padding: 2em;
+  color: #ff0;
+  font: 1em/1.4em Futura, Century Gothic, Helvetica, Lucida Grande, Arial, sans-serif;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+h1 {
+  font-weight: normal;
+  text-align: right;
+  padding: 0 1em;
+}
+h1 a {
+  color: rgba(1,6,66,0.75);
+}
+h2 {
+  color: #fff;
+  margin: 0 0 1em;
+  font-weight: normal;
+  display: block;
+  font-size: 1.4em;
+}
+.content {
+  margin: 1em;
+  padding: 1em;
+  border-radius: 1em;
+  background: rgba(1,6,66,0.25);
+  height: 80%;
+}
+.content .new {
+  float: right;
+}
+.content strong {
+  color: #fff;
+}
+.content input:focus,
+.content textarea:focus {
+  outline: none;
+  border-color: #ff0;
+}
+.content input,
+.content textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.25em;
+  background: rgba(1,6,66,0.25);
+  border: 0;
+  color: #ff0;
+  font: 1em/1.4em Futura, Century Gothic, Helvetica, Lucida Grande, Arial, sans-serif;
+  font-weight: normal;
+  margin: 0.25em;
+  border: 1px solid transparent;
+  box-shadow: inset 0 0 1em rgba(1,6,66,0.5);
+  border-radius: 0.25em;
+}
+.content input[type=date],
+.content input[type=time],
+.content input[type=submit] {
+  width: auto;
+}
+.content input[type=submit],
+.content .new {
+  box-shadow: 0 0 1em rgba(1,6,66,0.5);
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  background: #ff0;
+  color: rgba(1,6,66,0.75);
+}
+.content .new:active,
+.content input[type=submit]:active {
+  box-shadow: none;
+  position: relative;
+  top: 1px;
+}

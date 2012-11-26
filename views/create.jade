@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+	h2 new tidepool
+	form(action='/create',method='post')
+		label Date:
+			- var d = new Date(), date = (d.getMonth() + 1) + '/' + d.getDate() + '/' + d.getFullYear()
+			input(type='date',name='tidepool[date]',value=date)
+		label Time:
+			- var d = new Date(), time = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
+			input(type='time',name='tidepool[time]',value=time)
+		input(type='text',name='tidepool[location]',placeholder='location')
+		textarea(placeholder='critters',name='tidepool[critters]')
+		textarea(placeholder='plants',name='tidepool[plants]')
+		textarea(placeholder='notes',name='tidepool[notes]')
+		input(type='submit',value='Save')	

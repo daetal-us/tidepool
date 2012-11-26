@@ -1,0 +1,30 @@
+extends layout
+
+block content
+
+	h2 ##{tidepool.number}
+	
+	ul
+		li 
+			strong Date: 
+			span #{tidepool.date}
+		li 
+			strong Time: 
+			span #{tidepool.time}
+		li 
+			strong Location: 
+			span #{tidepool.location}
+	if tidepool.critters
+		strong Critters:
+		ul
+			each critter in tidepool.critters
+				li=critter
+	if tidepool.plants
+		strong Plants:
+		ul
+			each plant in tidepool.plants
+				li=plant
+	
+	if tidepool.notes
+		strong Notes:
+		p=tidepool.notes	
