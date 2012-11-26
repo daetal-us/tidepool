@@ -4,10 +4,15 @@ exports.index = function(req, res){
 	cb(function(err, bucket) {
 		// retrieve our view data
 		// force update before query execution with  `stale` parameter
-		bucket.view('dev_tidepools', 'all', {stale: false}, function(err, data) {
+		bucket.view('dev_tidepools', 'all', {stale: false, include_docs: true}, function(err, data) {
 			if (err) { throw(err); }
 
-			res.render('index', {tidepools: data});
+			// return each document's actual data
+			var data = data.map(function(v) {
+				return v.doc.json;
+			});
+
+			res.render('index', { tidepools: data});
 		});
 	});
 };
